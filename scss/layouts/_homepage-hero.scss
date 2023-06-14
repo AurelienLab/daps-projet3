@@ -1,4 +1,5 @@
 @import "homepage-hero/posters";
+@import "homepage-hero/headings";
 
 .homepage-hero {
   margin-top: -$header-height;
@@ -23,7 +24,7 @@
   'posters headings'
   'cta cta';
 
-  gap: 0px;
+  gap: 0;
 
   &__search {
     grid-area: search;
@@ -42,32 +43,6 @@
 
   &__headings {
     grid-area: headings;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: $font-logo;
-    padding-left: 3rem;
-    max-width: 680px;
-
-    & > * {
-      font-family: inherit;
-    }
-
-    &__name {
-      font-size: 4rem;
-      text-transform: uppercase;
-    }
-
-    &__date {
-      font-size: 3rem;
-      text-transform: uppercase;
-      align-self: flex-end;
-    }
-
-    &__place {
-      font-size: 2rem;
-      text-transform: uppercase;
-    }
   }
 
   &__cta {

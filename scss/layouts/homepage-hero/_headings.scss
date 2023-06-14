@@ -1,0 +1,53 @@
+.homepage-hero__headings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: $font-logo;
+  padding-left: 3rem;
+  max-width: 680px;
+
+  & > * {
+    font-family: inherit;
+  }
+
+  &__name {
+    font-size: 4rem;
+    text-transform: uppercase;
+    animation: from-right 3s cubic-bezier(0.19, 0.36, 0.15, 0.95) both ;
+  }
+
+  &__date {
+    font-size: 3rem;
+    text-transform: uppercase;
+    align-self: flex-end;
+    animation: from-left 3s 500ms cubic-bezier(0.19, 0.36, 0.15, 0.95) both ;
+  }
+
+  &__place {
+    font-size: 2rem;
+    text-transform: uppercase;
+    animation: from-right 3s 1s cubic-bezier(0.19, 0.36, 0.15, 0.95) both ;
+  }
+}
+
+@keyframes from-right {
+  0% {
+    transform: translateX(35px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes from-left {
+  0% {
+    transform: translateX(-35px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
