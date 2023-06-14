@@ -27,24 +27,33 @@ $posters-radius: 15px;
 
   .homepage-hero__poster {
     &:nth-child(1) {
-      border-top-left-radius: $posters-radius;
+      img {
+        border-top-left-radius: $posters-radius;
+      }
+
     }
     &:nth-child(2) {
       animation-delay: 300ms;
     }
     &:nth-child(3) {
-      border-top-right-radius: $posters-radius;
+      img {
+        border-top-right-radius: $posters-radius;
+      }
       animation-delay: 600ms;
     }
     &:nth-child(4) {
-      border-bottom-left-radius: $posters-radius;
+      img {
+        border-bottom-left-radius: $posters-radius;
+      }
       animation-delay: 900ms;
     }
     &:nth-child(5) {
       animation-delay: 1200ms;
     }
     &:nth-child(6) {
-      border-bottom-right-radius: $posters-radius;
+      img {
+        border-bottom-right-radius: $posters-radius;
+      }
       animation-delay: 1500ms;
     }
 
@@ -52,13 +61,24 @@ $posters-radius: 15px;
     display: block;
     height: 50%;
     aspect-ratio: 0.75;
-    overflow: hidden;
     transition: transform 100ms 50ms ease-in-out, border-radius 200ms ease-in-out, filter 200ms ease-in-out;
     animation: poster-in 500ms ease-in-out backwards;
     img {
+      z-index: 2;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: opacity 350ms ease-in-out, border-radius 200ms ease-in-out;
+      &:nth-of-type(2) {
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left:0;
+        transform: scale(1.05);
+        filter: blur(15px) brightness(180%);
+
+      }
     }
 
     &:after {
@@ -77,12 +97,17 @@ $posters-radius: 15px;
 
     &:hover {
       filter: none;
-      transition: transform 200ms 100ms ease-in-out, border-radius 200ms ease-in-out, filter 200ms ease-in-out;
+      transition: transform 200ms 100ms ease-in-out, filter 200ms ease-in-out;
       z-index: 2;
       transform: scale(1.1);
-      border-radius: 0;
+      img {
+        border-radius: 0;
+      }
       &:after {
         opacity: 0;
+      }
+      img:nth-of-type(2) {
+        opacity: 0.6;
       }
     }
   }
