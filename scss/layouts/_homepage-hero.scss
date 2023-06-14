@@ -1,0 +1,129 @@
+.homepage-hero {
+  margin-top: -$header-height;
+  padding-top: $header-height;
+  padding-left: 60px;
+  padding-right: 60px;
+  width: 100%;
+  height: 100vh;
+  background:  url(/assets/images/hero-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 0 9000px transparentize(map-get($colors, background-primary), 0.15);
+
+  display: grid;
+
+  grid-template-rows: auto max-content auto;
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-areas:
+  'search search'
+  'posters headings'
+  'cta cta';
+
+  gap: 0px;
+
+  &__search {
+    grid-area: search;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__posters {
+    position: relative;
+    grid-area: posters;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 32vw;
+
+    &__content {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 100%;
+      aspect-ratio: 1.125;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .homepage-hero__poster {
+      position: relative;
+      display: block;
+      height: 50%;
+      aspect-ratio: 0.75;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__headings {
+    grid-area: headings;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: $font-logo;
+    padding-left: 3rem;
+
+    & > * {
+      font-family: inherit;
+    }
+
+    &__name {
+      font-size: 4rem;
+      text-transform: uppercase;
+    }
+
+    &__date {
+      font-size: 3rem;
+      text-transform: uppercase;
+      align-self: flex-end;
+    }
+
+    &__place {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__cta {
+    grid-area: cta;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+
+    .link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .icon {
+      padding-top: 3px;
+      animation: cta-animation 2.5s ease-in-out infinite;
+    }
+
+  }
+}
+
+@keyframes cta-animation {
+  0%, 50%, 100% {
+    transform: translateX(0);
+  }
+
+  25%, 75% {
+    transform: translateX(25%);
+  }
+}

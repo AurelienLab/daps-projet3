@@ -1,0 +1,22 @@
+.link {
+  &--animated {
+    position: relative;
+    &:after {
+      content: '';
+      height: 2px;
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background-color: map-get($colors, text);
+      transform: scaleX(0);
+      transition: transform 300ms ease-in-out;
+    }
+
+    &:hover {
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

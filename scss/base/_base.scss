@@ -1,0 +1,10 @@
+body {
+  background-color: map-get($colors, background-primary);
+  color: map-get($colors, text);
+  font-family: $font-paragraph;
+  font-size: 20px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font-heading;
+}
