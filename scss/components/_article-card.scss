@@ -1,0 +1,34 @@
+.article-card {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+
+  &__date {
+    align-self: flex-end;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  &__illustration {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1.5;
+    object-fit: cover;
+  }
+
+  &__heading {
+    font-size: 1.3rem;
+  }
+
+  a.expanded {
+    &:before {
+      content:'';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
