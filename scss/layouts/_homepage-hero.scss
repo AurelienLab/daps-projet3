@@ -1,3 +1,5 @@
+@import "homepage-hero/posters";
+
 .homepage-hero {
   margin-top: -$header-height;
   padding-top: $header-height;
@@ -32,38 +34,10 @@
   }
 
   &__posters {
-    position: relative;
     grid-area: posters;
-    display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     height: 32vw;
-
-    &__content {
-      position: relative;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-end;
-      flex-direction: row;
-      flex-wrap: wrap;
-      height: 100%;
-      aspect-ratio: 1.125;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-
-    .homepage-hero__poster {
-      position: relative;
-      display: block;
-      height: 50%;
-      aspect-ratio: 0.75;
-      overflow: hidden;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
   }
 
   &__headings {
