@@ -85,27 +85,81 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .input-search {
+  z-index: 0;
   position: relative;
   width: 100%;
   max-width: 400px;
 }
 .input-search input {
+  z-index: 0;
+  border: none;
+  position: relative;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   font-size: 1.5rem;
   color: #FFFFFF;
   padding: 10px calc(5% + 2.5rem) 10px 15px;
   width: 100%;
-  transition: border-color 300ms ease-in-out;
+  transition: border-color 300ms ease-in-out, background-color 450ms ease-in-out, outline 250ms ease-in-out;
 }
 .input-search input:hover {
-  border-color: #FFFFFF;
+  outline-color: #FFFFFF;
+}
+.input-search input:focus {
+  outline-color: #FFFFFF;
+  outline-width: 2px;
+  background-color: #12112B;
+  transition: border-color 300ms ease-in-out, background-color 150ms ease-in-out;
+}
+.input-search input:focus ~ .input-search__background {
+  opacity: 1;
 }
 .input-search button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+.input-search__background {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 350ms ease-in-out;
+  /*
+  * Prevents issues when the parent creates a
+  * stacking context. (For example, using the transform
+  * property )
+  */
+}
+.input-search__background:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(212deg, #984AFF 60%, #b1a3f8 -19%);
+  transform: translate3d(0px, 0px, 0) scale(1.01);
+  filter: blur(22px);
+  opacity: 0.85;
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+.input-search__background::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
 }
 .input-search .icon {
   position: absolute;
