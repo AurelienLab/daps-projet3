@@ -680,4 +680,54 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 0;
 }
 
+.movie-layout .page-hero {
+  height: 420px;
+}
+
+.movie-page > * {
+  max-width: 1200px;
+  margin: auto;
+}
+.movie-page__informations {
+  display: flex;
+  flex-direction: row;
+  background-color: #211f50;
+  padding: 20px 40px;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  transform: translateY(-50%);
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.movie-page__informations > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3rem;
+  font-size: 1rem;
+}
+.movie-page__informations > * svg {
+  height: 28px;
+}
+.movie-page__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.movie-page__actions .link {
+  line-height: 2rem;
+}
+.movie-page__content {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+.movie-page__content__heading {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
 /*# sourceMappingURL=main.css.map */
