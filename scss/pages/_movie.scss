@@ -6,6 +6,7 @@
 
 .movie-page {
   & > * {
+    width: 90%;
     max-width: 1200px;
     margin: auto;
   }
@@ -31,9 +32,14 @@
         height: 28px;
       }
     }
+
+    & ~ div {
+      margin-top: 0;
+    }
   }
 
   &__actions {
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -52,6 +58,18 @@
     &__heading {
       font-size: 3rem;
       margin-bottom: 4rem;
+    }
+
+    &.error404 {
+      justify-content: center;
+      flex-direction: column;
+      gap: 25px;
+      img {
+        height: 300px;
+      }
+      p {
+        text-align: center;
+      }
     }
   }
 }

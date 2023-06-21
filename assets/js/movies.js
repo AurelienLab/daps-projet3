@@ -93,7 +93,7 @@ function displayMovieList(list) {
                   </div>
               </div>
               <div class="movie__actions">
-                  <a href="#" class="link link--animated">En savoir plus</a>
+                  <a href="film.html?id=${movie.id}" class="link link--animated">En savoir plus</a>
                   <a href="#" class="book-button">Réserver</a>
               </div>
         `

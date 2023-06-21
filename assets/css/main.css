@@ -685,6 +685,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .movie-page > * {
+  width: 90%;
   max-width: 1200px;
   margin: auto;
 }
@@ -710,7 +711,11 @@ h1, h2, h3, h4, h5, h6 {
 .movie-page__informations > * svg {
   height: 28px;
 }
+.movie-page__informations ~ div {
+  margin-top: 0;
+}
 .movie-page__actions {
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -728,6 +733,17 @@ h1, h2, h3, h4, h5, h6 {
 .movie-page__content__heading {
   font-size: 3rem;
   margin-bottom: 4rem;
+}
+.movie-page__content.error404 {
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.movie-page__content.error404 img {
+  height: 300px;
+}
+.movie-page__content.error404 p {
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

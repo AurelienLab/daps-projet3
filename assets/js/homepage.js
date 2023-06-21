@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     postersContainer.innerHTML = '' // Empty the container just in case of ...
     for(let movie of selected) {
         const posterLink = document.createElement('a')
-        posterLink.setAttribute('href', '#')
+        posterLink.setAttribute('href', 'film.html?id=' + movie.id)
         posterLink.classList.add('homepage-hero__poster')
 
         const posterImg = document.createElement('img' )
