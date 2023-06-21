@@ -222,6 +222,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 80px;
   opacity: 70%;
   transform: scale(0.9);
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 .date-selector__date > * {
   display: block;
@@ -256,6 +257,16 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #211f50;
   padding: 35px;
   border-radius: 15px;
+  animation: movie-appear 350ms ease-in-out both;
+}
+.movie:nth-of-type(2) {
+  animation-delay: 200ms;
+}
+.movie:nth-of-type(3) {
+  animation-delay: 400ms;
+}
+.movie:nth-of-type(4) {
+  animation-delay: 600ms;
 }
 .movie__poster {
   flex-grow: 2;
@@ -273,6 +284,12 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: space-between;
 }
+.movie__heading {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 1rem;
+}
 .movie__title {
   font-size: 2rem;
 }
@@ -288,6 +305,10 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   background-color: #984AFF;
   padding: 5px 10px;
+}
+.movie__author {
+  color: #999999;
+  font-size: 1.3rem;
 }
 .movie__synopsis {
   font-size: 1rem;
@@ -320,8 +341,18 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 25px;
+  line-height: 1.5rem;
 }
 
+@keyframes movie-appear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+  }
+}
 .book-button {
   display: block;
   background-color: #FFD400;

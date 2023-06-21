@@ -13,6 +13,7 @@
     width: 80px;
     opacity: 70%;
     transform: scale(0.9);
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
     & > * {
       display: block;
       width: 100%;
