@@ -711,7 +711,7 @@ h1, h2, h3, h4, h5, h6 {
 .movie-page__informations > * svg {
   height: 28px;
 }
-.movie-page__informations ~ div {
+.movie-page__informations + div {
   margin-top: 0;
 }
 .movie-page__actions {
