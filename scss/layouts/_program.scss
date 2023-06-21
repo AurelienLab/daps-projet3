@@ -1,0 +1,29 @@
+.program {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 35px;
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &__list {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    hr {
+      width: 80%;
+      border-top: 1px solid #FFFFFF;
+      border-bottom: 0;
+    }
+  }
+}

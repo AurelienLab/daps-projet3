@@ -1,0 +1,19 @@
+.page-hero {
+  height: $header-height + 200px;
+  margin-top: -$header-height;
+  padding-top: $header-height;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/assets/images/hero-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 9000px transparentize(map-get($colors, background-primary), 0.50);
+
+  &__title {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+}
