@@ -1,11 +1,11 @@
 .homepage__articles {
-  padding: 65px;
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: auto;
   gap: 45px;
   background-color: #181818;
+  padding: 65px 65px 8rem;
 
   & > * {
     max-width: 1400px;

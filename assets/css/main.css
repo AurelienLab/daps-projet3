@@ -376,6 +376,7 @@ h1, h2, h3, h4, h5, h6 {
 .header__logo {
   font-family: "Gloock", serif;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 .header__nav__menu {
   display: flex;
@@ -384,6 +385,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header__nav__menu__item .link {
   padding-bottom: 5px;
+}
+
+.footer {
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: center;
+  background-color: black;
+}
+.footer__logo {
+  font-family: "Gloock", serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.footer__nav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 1rem;
 }
 
 .homepage-hero__posters {
@@ -605,13 +630,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .homepage__articles {
-  padding: 65px;
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: auto;
   gap: 45px;
   background-color: #181818;
+  padding: 65px 65px 8rem;
 }
 .homepage__articles > * {
   max-width: 1400px;
@@ -663,6 +688,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   padding-top: 50px;
   gap: 35px;
+  padding-bottom: 5rem;
 }
 .program__title {
   text-align: center;
@@ -690,6 +716,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   padding-top: 50px;
   gap: 35px;
+  padding-bottom: 5rem;
 }
 .news__title {
   text-align: center;
@@ -714,6 +741,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 420px;
 }
 
+.movie-page {
+  padding-bottom: 5rem;
+}
 .movie-page > * {
   width: 90%;
   max-width: 1200px;
@@ -780,6 +810,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 420px;
 }
 
+.article-page {
+  padding-bottom: 5rem;
+}
 .article-page > * {
   width: 90%;
   max-width: 1200px;

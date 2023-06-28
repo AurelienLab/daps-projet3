@@ -1,0 +1,25 @@
+.footer {
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: center;
+  background-color: black;
+
+  &__logo {
+    font-family: $font-logo;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__nav {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1rem;
+  }
+}
