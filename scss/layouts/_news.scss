@@ -1,0 +1,28 @@
+.news {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 35px;
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  &__list {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    & > * {
+      width: 28%;
+    }
+  }
+}

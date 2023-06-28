@@ -19,6 +19,10 @@
 
   &__heading {
     font-size: 1.3rem;
+
+    &::first-letter {
+      text-transform:capitalize;
+    }
   }
 
   a.expanded {

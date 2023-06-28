@@ -1,0 +1,48 @@
+.article-layout {
+  .page-hero {
+    height: calc($header-height + 300px);
+  }
+}
+
+.article-page {
+  & > * {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  &__actions {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .link {
+      line-height: 2rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    margin-top: 5rem;
+
+    &__heading {
+      font-size: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    &.error404 {
+      justify-content: center;
+      flex-direction: column;
+      gap: 25px;
+      img {
+        height: 300px;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

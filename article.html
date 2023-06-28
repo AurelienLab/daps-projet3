@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<html-include src="header.html"></html-include>
+<main class="article-layout">
+  <section class="page-hero">
+    <h1 class="page-hero__title" id="article_title"></h1>
+  </section>
+  <section class="article-page">
+    <div class="article-page__actions">
+      <a href="actualites.html" class="link link--animated">
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+        </svg>
+        </span>
+        Retour aux articles
+      </a>
+    </div>
+
+    <div class="article-page__content">
+        <p class="article-page__content" id="article_content">
+        </p>
+    </div>
+  </section>
+</main>
+</body>
+<script type="text/javascript" src="assets/js/include.js"></script>
+<script src="assets/js/article.js" type="module"></script>
+</html>
