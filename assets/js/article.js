@@ -16,12 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.page-hero').style = `background-image: url('${article.cover}')`
         document.querySelector('#article_date').innerHTML = 'Le ' + article.datetime.toLocaleDateString('fr-FR', dateOptions)
         document.querySelector('#article_content').innerHTML = nl2br(article.content)
+        document.title = article.title + ' ' + document.title
     }
 })
 
 function abort404() {
     document.querySelector('#article_title').innerHTML = "Article introuvable"
-    // document.querySelector('.movie-page__content__heading').remove()
+    document.title = 'Article introuvable ' + document.title
+
     const content = document.querySelector('.article-page__content')
     content.classList.add('error404')
     content.innerHTML = `

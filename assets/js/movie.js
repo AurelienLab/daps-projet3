@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('#movie_poster').alt = "Affiche de " + movie.title
             document.querySelector('#movie_synopsis').innerHTML = movie.synopsis
             document.querySelector('.book-button').setAttribute('data-movie-id', movie.id)
+            document.title = movie.title + ' ' + document.title
         }
 
         bindButtons()
@@ -34,6 +35,7 @@ function abort404() {
     document.querySelector('#movie_poster').remove()
     document.querySelector('.movie-page__content div').remove()
     document.querySelector('.book-button').remove()
+    document.title = 'Film introuvable ' + document.title
     // document.querySelector('.movie-page__content__heading').remove()
     const content = document.querySelector('.movie-page__content')
     content.classList.add('error404')
