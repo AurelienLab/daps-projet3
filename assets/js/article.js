@@ -9,9 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if(!article) {
         abort404()
     } else {
+        const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
         article.datetime = new Date(article.datetime)
         document.querySelector('#article_title').innerHTML = article.title
         document.querySelector('.page-hero').style = `background-image: url('${article.cover}')`
+        document.querySelector('#article_date').innerHTML = 'Le ' + article.datetime.toLocaleDateString('fr-FR', dateOptions)
         document.querySelector('#article_content').innerHTML = nl2br(article.content)
     }
 })
