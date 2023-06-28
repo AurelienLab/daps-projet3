@@ -32,12 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const lastArticles = articles.sort((a,b) => b.datetime - a.datetime).slice(0, 3)
     const container = document.querySelector('.homepage__articles__list')
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
     container.innerHTML = '';
     for(let article of lastArticles) {
-
-        const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-
-        const articleBlock = document.createElement('a')
+                const articleBlock = document.createElement('a')
         articleBlock.classList.add('fit-content')
         articleBlock.setAttribute('href', 'article.html?id='+ article.id)
         articleBlock.innerHTML = `
