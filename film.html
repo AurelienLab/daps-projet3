@@ -12,6 +12,7 @@
     <h1 class="page-hero__title" id="movie_title"></h1>
   </section>
   <section class="movie-page">
+    <!-- INFORMATIONS CARD -->
     <div class="movie-page__informations">
       <div class="movie__data__duration">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -38,6 +39,9 @@
         <span id="movie_language"></span>
       </div>
     </div>
+    <!-- END OF INFORMATIONS CARD -->
+
+    <!-- ACTIONS -->
     <div class="movie-page__actions">
       <a href="programmation.html" class="link link--animated">
         <span class="icon">
@@ -47,8 +51,9 @@
         </span>
         Retour à la programmation
       </a>
-      <a href="#" class="book-button">Réserver</a>
+      <a href="#" class="button book-button">Réserver</a>
     </div>
+    <!-- END OF ACTIONS -->
 
     <div class="movie-page__content">
       <img src="#" class="movie-page__poster" id="movie_poster" alt="">
@@ -61,7 +66,9 @@
   </section>
 </main>
 <html-include src="partials/footer.html"></html-include>
+<html-include src="partials/booking_modal.html"></html-include>
 </body>
 <script type="text/javascript" src="assets/js/include.js"></script>
-<script src="assets/js/movie.js" type="module"></script>
+<script src="assets/js/booking.js" type="text/javascript"></script>
+<script src="assets/js/movie.js" type="text/javascript"></script>
 </html>

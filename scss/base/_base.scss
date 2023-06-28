@@ -3,6 +3,7 @@ body {
   color: map-get($colors, text);
   font-family: $font-paragraph;
   font-size: 20px;
+  width: 100%;
 }
 
 h1,h2,h3,h4,h5,h6 {

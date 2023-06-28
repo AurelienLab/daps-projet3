@@ -15,7 +15,9 @@ class HTMLInclude extends HTMLElement {
             throw new Error(`Could not load resource: ${source}`);
         }
         const content = await response.text();
-        this.innerHTML = content;
+        const placeHolder = document.createElement('div')
+        placeHolder.innerHTML = content;
+        this.replaceWith(placeHolder.firstElementChild) ;
     }
 }
 
