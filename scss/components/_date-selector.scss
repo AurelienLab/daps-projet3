@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: row;
   gap: 25px;
+  width: 90%;
+  margin: auto;
   justify-content: center;
 
   &__date {

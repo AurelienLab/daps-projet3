@@ -215,6 +215,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   gap: 25px;
+  width: 90%;
+  margin: auto;
   justify-content: center;
 }
 .date-selector__date {
@@ -262,6 +264,20 @@ h1, h2, h3, h4, h5, h6 {
   padding: 35px;
   border-radius: 15px;
   animation: movie-appear 350ms ease-in-out both;
+  width: 90%;
+  margin: auto;
+}
+@media screen and (max-width: 1160px) {
+  .movie {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 650px) {
+  .movie {
+    flex-direction: column;
+    padding: 25px;
+  }
 }
 .movie:nth-of-type(2) {
   animation-delay: 200ms;
@@ -277,6 +293,19 @@ h1, h2, h3, h4, h5, h6 {
   height: 200px;
   aspect-ratio: 2/3;
 }
+@media screen and (max-width: 1160px) {
+  .movie__poster {
+    width: 35%;
+    height: auto;
+    flex-grow: 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .movie__poster {
+    width: 100%;
+    height: auto;
+  }
+}
 .movie__poster img {
   width: 100%;
   height: 100%;
@@ -288,11 +317,33 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (max-width: 1160px) {
+  .movie__infos {
+    width: 60%;
+    flex-grow: 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .movie__infos {
+    width: 100%;
+    gap: 1rem;
+  }
+}
 .movie__heading {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   gap: 1rem;
+}
+@media screen and (max-width: 1160px) {
+  .movie__heading {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 650px) {
+  .movie__heading {
+    width: 100%;
+  }
 }
 .movie__title {
   font-size: 2rem;
@@ -329,6 +380,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #999999;
   gap: 5rem;
 }
+@media screen and (max-width: 1160px) {
+  .movie__data {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .movie__data {
+    display: none;
+  }
+}
 .movie__data > * {
   display: flex;
   flex-direction: row;
@@ -346,6 +408,20 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 25px;
   line-height: 1.5rem;
+}
+@media screen and (max-width: 1160px) {
+  .movie__actions {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 650px) {
+  .movie__actions {
+    flex-direction: column;
+  }
+  .movie__actions > * {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @keyframes movie-appear {

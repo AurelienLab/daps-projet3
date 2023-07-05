@@ -1,4 +1,12 @@
 .movie {
+  @include tablet-only {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @include mobile-only {
+    flex-direction: column;
+    padding: 25px;
+  }
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -6,6 +14,8 @@
   padding: 35px;
   border-radius: 15px;
   animation: movie-appear 350ms ease-in-out both;
+  width: 90%;
+  margin: auto;
 
   &:nth-of-type(2) {
     animation-delay: 200ms;
@@ -20,6 +30,16 @@
 
 
   &__poster {
+    @include tablet-only {
+      width: 35%;
+      height: auto;
+      flex-grow: 0;
+    }
+
+    @include mobile-only {
+      width: 100%;
+      height: auto;
+    }
     flex-grow: 2;
     height: 200px;
     aspect-ratio: 2/3;
@@ -31,6 +51,15 @@
   }
 
   &__infos {
+    @include tablet-only {
+      width: 60%;
+      flex-grow: 0;
+    }
+
+    @include mobile-only {
+      width: 100%;
+      gap: 1rem;
+    }
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -38,6 +67,12 @@
   }
 
   &__heading {
+    @include tablet-only {
+      flex-direction: column;
+    }
+    @include mobile-only {
+      width: 100%;
+    }
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -77,6 +112,14 @@
   }
 
   &__data {
+    @include tablet-only {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    @include mobile-only {
+      display: none;
+    }
     display: flex;
     flex-direction: row;
     font-size: 0.9rem;
@@ -95,6 +138,17 @@
   }
 
   &__actions {
+    @include tablet-only {
+      flex-direction: row;
+    }
+
+    @include mobile-only {
+      flex-direction: column;
+      & > * {
+        width: 100%;
+        text-align: center;
+      }
+    }
     flex-grow: 2;
     display: flex;
     flex-direction: column;
