@@ -9,12 +9,20 @@
   background-color: black;
 
   &__logo {
+    @include mobile-only {
+      text-align: center;
+    }
     font-family: $font-logo;
     font-size: 2rem;
     text-transform: uppercase;
   }
 
   &__nav {
+    @include mobile-only {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
     display: flex;
     width: 100%;
     flex-direction: row;
