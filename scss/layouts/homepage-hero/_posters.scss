@@ -3,6 +3,9 @@ $posters-radius: 15px;
 .homepage-hero__posters {
   position: relative;
   display: flex;
+  @include mobile-only {
+    justify-content: center!important;
+  }
 
   &__content {
     position: relative;
@@ -13,6 +16,10 @@ $posters-radius: 15px;
     flex-wrap: wrap;
     height: 100%;
     aspect-ratio: 1.125;
+
+    @include mobile-only {
+      aspect-ratio: 0.75;
+    }
 
     &:hover {
       .homepage-hero__poster {
@@ -30,9 +37,11 @@ $posters-radius: 15px;
       img {
         border-top-left-radius: $posters-radius;
       }
-
     }
     &:nth-child(2) {
+      @include mobile-only {
+        display: none;
+      }
       animation-delay: 300ms;
     }
     &:nth-child(3) {
@@ -48,9 +57,13 @@ $posters-radius: 15px;
       animation-delay: 900ms;
     }
     &:nth-child(5) {
+      @include mobile-only {
+        display: none;
+      }
       animation-delay: 1200ms;
     }
     &:nth-child(6) {
+
       img {
         border-bottom-right-radius: $posters-radius;
       }

@@ -1,4 +1,9 @@
 .homepage-hero__headings {
+  @include mobile-only {
+    width: 100%;
+    padding-left: 0;
+    gap: 1rem;
+  }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,12 +16,18 @@
   }
 
   &__name {
+    @include tablet-only {
+      font-size: 2.5rem;
+    }
     font-size: 4rem;
     text-transform: uppercase;
     animation: from-right 3s cubic-bezier(0.19, 0.36, 0.15, 0.95) both ;
   }
 
   &__date {
+    @include tablet-only {
+      font-size: 2rem;
+    }
     font-size: 3rem;
     text-transform: uppercase;
     align-self: flex-end;
@@ -24,6 +35,9 @@
   }
 
   &__place {
+    @include tablet-only {
+      font-size: 1.2rem;
+    }
     font-size: 2rem;
     text-transform: uppercase;
     animation: from-right 3s 1s cubic-bezier(0.19, 0.36, 0.15, 0.95) both ;

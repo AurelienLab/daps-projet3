@@ -2,6 +2,18 @@
 @import "homepage-hero/headings";
 
 .homepage-hero {
+  @include mobile-only {
+    height: auto;
+    padding: 1rem 12px 3rem;
+    margin: auto;
+    grid-template-areas:
+      'headings headings'
+      'search search'
+      'posters posters'
+      'cta cta';
+
+    row-gap: 3rem;
+  }
   margin-top: -$header-height;
   padding-top: $header-height;
   padding-left: 60px;
@@ -38,7 +50,7 @@
     grid-area: posters;
     justify-content: flex-end;
     align-items: flex-end;
-    height: 50vh;
+    max-height: 50vh;
   }
 
   &__headings {
@@ -53,6 +65,10 @@
     align-items: center;
 
     .link {
+      @include mobile-only {
+        display: inline;
+        text-align: center;
+      }
       display: flex;
       flex-direction: row;
       align-items: center;
