@@ -1,4 +1,5 @@
 .homepage-hero__headings {
+  overflow: hidden;
   @include mobile-only {
     width: 100%;
     padding-left: 0;

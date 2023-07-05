@@ -1,19 +1,26 @@
 .homepage__articles {
+  @include mobile-only {
+    padding-top: 3rem;
+  }
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: auto;
   gap: 45px;
   background-color: #181818;
-  padding: 65px 65px 8rem;
+  padding: 8rem 0;
 
   & > * {
     max-width: 1400px;
     margin: auto;
-    width: 100%;
+    width: 90%;
   }
 
   &__headings {
+    @include mobile-only {
+      flex-direction: column;
+      gap: 1rem;
+    }
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -24,11 +31,17 @@
   }
 
   &__list {
+    @include mobile-only {
+      flex-direction: column;
+    }
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 5rem;
     & > * {
+      @include mobile-only {
+        width: 100%;
+      }
       width: 33%;
     }
   }
