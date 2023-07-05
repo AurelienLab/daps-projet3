@@ -1,0 +1,82 @@
+.search {
+  &__filters {
+    @include tablet-only {
+      & > * {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+    @include mobile-only {
+      flex-direction: column;
+      gap: 1rem;
+      transform: translateY(-25%);
+    }
+
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    background-color: lighten(map-get($colors, background-primary), 10%);
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    transform: translateY(-50%);
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 20px 40px 2rem;
+
+    .input-search {
+      max-width: 300px;
+      font-size: 1rem;
+    }
+
+
+    .button {
+      @include mobile-only {
+        align-self: auto;
+      }
+      align-self: flex-end;
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: transparent;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 48 48' stroke-width='1.5' stroke='white' class='w-3 h-3'><path stroke-linecap='round' stroke-linejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5' /></svg>");
+      background-repeat: no-repeat;
+      background-position-x: 100%;
+      background-position-y: 10px;
+      border:none;
+      outline: 1px solid transparentize(map-get($colors, text), 0.7);
+      border-radius: 10px;
+      font-size: 1rem;
+      color: map-get($colors, text);
+      padding: 10px calc(5% + 2.5rem) 10px 15px;
+      width: 100%;
+      transition: border-color 300ms ease-in-out, background-color 450ms ease-in-out, outline 250ms ease-in-out;
+
+      &:hover {
+        outline-color: map-get($colors, text);
+      }
+
+      &:focus {
+        outline-color: map-get($colors, text);
+        outline-width: 2px;
+        background-color: map-get($colors, background-primary);
+        transition: border-color 300ms ease-in-out, background-color 150ms ease-in-out;
+      }
+    }
+
+    label {
+      font-size: 1rem;
+      line-height: 2rem;
+      color: #c4c4c4;
+    }
+  }
+}
+
+.no-result {
+  width: 100%;
+  font-weight: normal;
+  text-align: center;
+}
