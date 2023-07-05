@@ -1,4 +1,5 @@
 .button {
+  cursor: pointer;
   font-size: 1.2rem;
   border: none;
   display: block;
@@ -19,6 +20,11 @@
       color: map-get($colors, background-primary);
       background-color: map-get($colors, primary);
     }
+  }
+
+  &--sm {
+    font-size: 1rem;
+    padding: 10px 25px;
   }
 
   &:hover {
