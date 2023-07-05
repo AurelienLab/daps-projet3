@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infos pratique | Les Films de Plein Air</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<html-include src="partials/header.html"></html-include>
+<main class="page-layout">
+  <section class="page-hero">
+    <h1 class="page-hero__title" id="article_title">Infos pratiques</h1>
+  </section>
+  <section class="page">
+
+    <h2 class="page__heading">✉️ Nous contacter</h2>
+    <p>Pour nous envoyer un message, merci de remplir le formulaire ci-dessous</p>
+    <form class="contact-form" method="POST" action="contact-success.html">
+      <div class="contact-form__row">
+        <div class="contact-form__field">
+          <input type="text" id="firstname" name="firstname" class="input" placeholder=" " required>
+          <label for="firstname">
+            Votre prénom
+          </label>
+        </div>
+        <div class="contact-form__field">
+          <input type="text" id="lastname" name="firstname" class="input" placeholder=" " required>
+          <label for="lastname">
+            Votre nom
+          </label>
+        </div>
+      </div>
+      <div class="contact-form__row">
+        <div class="contact-form__field">
+          <input type="email" id="email" name="email" class="input" placeholder=" " required>
+          <label for="email">
+            Votre adresse email
+          </label>
+        </div>
+      </div>
+      <div class="contact-form__row">
+        <div class="contact-form__field">
+          <textarea id="message" name="message" class="input" placeholder=" " required rows="10"></textarea>
+          <label for="message">
+            Votre message
+          </label>
+        </div>
+      </div>
+      <div class="contact-form__row">
+        <div class="contact-form__field">
+          <button type="submit" class="button">Envoyer</button>
+        </div>
+      </div>
+    </form>
+
+
+  </section>
+</main>
+<html-include src="partials/footer.html"></html-include>
+</body>
+<script type="text/javascript" src="assets/js/include.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+</html>

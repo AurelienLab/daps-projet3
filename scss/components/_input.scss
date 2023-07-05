@@ -1,0 +1,24 @@
+.input {
+  border:none;
+  position: relative;
+  background-color: transparent;
+  outline: 1px solid transparentize(map-get($colors, text), 0.7);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: map-get($colors, text);
+  padding: 10px calc(5% + 2.5rem) 10px 15px;
+  width: 100%;
+  transition: border-color 300ms ease-in-out, background-color 450ms ease-in-out, outline 250ms ease-in-out;
+  font-family: inherit;
+
+  &:hover {
+    outline-color: map-get($colors, text);
+  }
+
+  &:focus {
+    outline-color: map-get($colors, text);
+    outline-width: 2px;
+    background-color: map-get($colors, background-primary);
+    transition: border-color 300ms ease-in-out, background-color 150ms ease-in-out;
+  }
+}

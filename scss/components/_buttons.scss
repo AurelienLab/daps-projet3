@@ -1,4 +1,5 @@
 .button {
+  font-size: 1.2rem;
   border: none;
   display: block;
   background-color: map-get($colors, primary);
@@ -8,6 +9,17 @@
   min-width: 200px;
   text-align: center;
   transition: background-color 120ms ease-in-out;
+
+  &--outline {
+    background: transparent;
+    color: map-get($colors, primary);
+    border: 2px solid map-get($colors, primary);
+
+    &:hover {
+      color: map-get($colors, background-primary);
+      background-color: map-get($colors, primary);
+    }
+  }
 
   &:hover {
     background-color: lighten(map-get($colors, primary), 25%);
