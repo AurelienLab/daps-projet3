@@ -13,12 +13,21 @@
   box-shadow: inset 0 0 0 9000px transparentize(map-get($colors, background-primary), 0.50);
   gap: 2rem;
 
-  .input-search {
-    input {
-      background-color: transparentize(map-get($colors, background-primary), 0.3);
+  form {
+    max-width: 400px;
+    width: 90%;
+    .input-search {
+      input {
+        background-color: transparentize(map-get($colors, background-primary), 0.3);
+      }
     }
   }
+
   &__title {
+    @include mobile-only {
+      font-size: 2rem;
+    }
+
     width: 90%;
     line-height: 3.4rem;
     text-align: center;
