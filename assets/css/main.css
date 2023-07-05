@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   gap: 30px;
   background-color: #211f50;
-  padding: 35px;
+  padding: 5%;
   border-radius: 15px;
   animation: movie-appear 350ms ease-in-out both;
   width: 90%;
@@ -319,7 +319,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 1160px) {
   .movie__infos {
-    width: 60%;
+    width: 59%;
     flex-grow: 0;
   }
 }
