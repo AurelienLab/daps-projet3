@@ -13,6 +13,9 @@
   box-shadow: inset 0 0 0 9000px transparentize(map-get($colors, background-primary), 0.50);
 
   &__title {
+    width: 90%;
+    line-height: 3.4rem;
+    text-align: center;
     font-size: 3rem;
     text-transform: uppercase;
   }

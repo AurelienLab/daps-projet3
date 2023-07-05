@@ -12,6 +12,11 @@
     margin: auto;
   }
   &__informations {
+    @include mobile-only {
+      flex-direction: column;
+      gap: 1rem;
+      transform: translateY(-25%);
+    }
     display: flex;
     flex-direction: row;
     background-color: lighten(map-get($colors, background-primary), 10%);
@@ -24,6 +29,9 @@
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
     & > * {
+      @include mobile-only {
+        flex-direction: row;
+      }
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -40,6 +48,14 @@
   }
 
   &__actions {
+    @include mobile-only {
+      flex-direction: column;
+      gap: 2rem;
+
+      .button {
+        width: 100%;
+      }
+    }
     margin-top: 40px;
     display: flex;
     flex-direction: row;
@@ -51,6 +67,9 @@
   }
 
   &__content {
+    @include mobile-only {
+      flex-direction: column;
+    }
     display: flex;
     flex-direction: row;
     gap: 3rem;
