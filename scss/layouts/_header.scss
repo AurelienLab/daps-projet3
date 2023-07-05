@@ -1,4 +1,11 @@
 .header {
+  @include tablet-only {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  position: relative;
   height: $header-height;
   display: flex;
   flex-direction: column;
@@ -6,13 +13,56 @@
   justify-content: space-evenly;
 
   &__logo {
+    z-index: 110;
     font-family: $font-logo;
     font-size: 2rem;
     text-transform: uppercase;
   }
 
+  &__toggle-btn {
+    z-index: 110;
+    cursor: pointer;
+    display: none;
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    svg {
+      width: 3rem;
+    }
+    @include tablet-only {
+      display: block;
+    }
+  }
+
   &__nav {
+    @include tablet-only {
+      z-index: 100;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      background-color: transparentize(map-get($colors, background-primary), 0.1);
+      visibility: hidden;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 350ms ease-in-out, visibility 400ms 0ms;
+      backdrop-filter: blur(8px);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      &.open {
+        max-height: 1000px;
+        visibility: visible;
+      }
+    }
     &__menu {
+
+      @include tablet-only {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-size: 2rem;
+        padding: 3rem;
+        padding-top: $header-height;
+      }
       display: flex;
       flex-direction: row;
       gap: 3rem;

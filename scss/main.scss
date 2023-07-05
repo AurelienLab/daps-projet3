@@ -1,4 +1,5 @@
 @import "variables/variables";
+@import "variables/functions";
 
 @import "base/reset";
 @import "base/fonts";
@@ -21,7 +22,6 @@
 @import "layouts/program";
 @import "layouts/news";
 
-@import "pages/homepage";
 @import "pages/movie";
 @import "pages/article";
 @import "pages/page";

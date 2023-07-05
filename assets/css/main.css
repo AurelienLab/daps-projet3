@@ -505,21 +505,77 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
+  position: relative;
   height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 1160px) {
+  .header {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+}
 .header__logo {
+  z-index: 110;
   font-family: "Gloock", serif;
   font-size: 2rem;
   text-transform: uppercase;
+}
+.header__toggle-btn {
+  z-index: 110;
+  cursor: pointer;
+  display: none;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+}
+.header__toggle-btn svg {
+  width: 3rem;
+}
+@media screen and (max-width: 1160px) {
+  .header__toggle-btn {
+    display: block;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .header__nav {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(18, 17, 43, 0.9);
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 350ms ease-in-out, visibility 400ms 0ms;
+    backdrop-filter: blur(8px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  .header__nav.open {
+    max-height: 1000px;
+    visibility: visible;
+  }
 }
 .header__nav__menu {
   display: flex;
   flex-direction: row;
   gap: 3rem;
+}
+@media screen and (max-width: 1160px) {
+  .header__nav__menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 2rem;
+    padding: 3rem;
+    padding-top: 120px;
+  }
 }
 .header__nav__menu__item .link {
   padding-bottom: 5px;
