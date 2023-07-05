@@ -505,6 +505,11 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 650px) {
+  .modal__modal__content {
+    padding: 1rem;
+  }
+}
 .modal__modal__content > .icon {
   width: 45px;
   height: 45px;
@@ -525,6 +530,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 3rem 2rem 3rem;
   font-size: 0.9rem;
   color: #8a8a8a;
+}
+@media screen and (max-width: 650px) {
+  .modal__modal__footer {
+    padding: 0 1rem 2rem 1rem;
+  }
 }
 
 .booking-modal__form {
