@@ -8,12 +8,23 @@
   padding-bottom: 5rem;
 
   &__title {
+    @include tablet-only {
+      margin-bottom: 2rem;
+    }
+    width: 90%;
+    margin: auto;
     text-align: center;
     font-size: 2rem;
     margin-bottom: 6rem;
   }
 
   &__list {
+    @include tablet-only {
+      gap: 2rem;
+    }
+    @include mobile-only {
+      gap: 3rem;
+    }
     width: 90%;
     max-width: 1400px;
     margin: auto;
@@ -23,6 +34,12 @@
     justify-content: center;
     gap: 5rem;
     & > * {
+      @include tablet-only {
+        width: 45%;
+      }
+      @include mobile-only {
+        width: 100%;
+      }
       width: 28%;
     }
   }
