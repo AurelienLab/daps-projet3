@@ -343,6 +343,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 650px) {
   .movie__heading {
     width: 100%;
+    align-items: flex-start;
   }
 }
 .movie__title {
@@ -353,10 +354,12 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-wrap: wrap;
   font-size: 0.9rem;
   gap: 12px;
 }
 .movie__tags > * {
+  text-wrap: avoid;
   display: inline-block;
   background-color: #984AFF;
   padding: 5px 10px;
