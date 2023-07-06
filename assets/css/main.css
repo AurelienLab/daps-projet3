@@ -341,7 +341,6 @@ h1, h2, h3, h4, h5, h6 {
   gap: 12px;
 }
 .movie__tags > * {
-  text-wrap: avoid;
   display: inline-block;
   background-color: #984AFF;
   padding: 5px 10px;
@@ -355,7 +354,6 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3; /* number of lines to show */
-  line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 .movie__data {

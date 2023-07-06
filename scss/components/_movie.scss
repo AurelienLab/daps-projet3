@@ -94,7 +94,6 @@
     font-size: 0.9rem;
     gap: 12px;
     & > * {
-      text-wrap: avoid;
       display: inline-block;
       background-color: #984AFF;
       padding: 5px 10px;
@@ -111,7 +110,6 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
-    line-clamp: 3;
     -webkit-box-orient: vertical;
   }
 
