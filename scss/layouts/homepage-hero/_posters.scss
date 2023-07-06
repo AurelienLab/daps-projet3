@@ -15,10 +15,10 @@ $posters-radius: 15px;
     flex-direction: row;
     flex-wrap: wrap;
     height: 100%;
-    aspect-ratio: 1.125;
+    aspect-ratio: 9/8;
 
     @include mobile-only {
-      aspect-ratio: 0.75;
+      aspect-ratio: 3/4;
     }
 
     &:hover {
@@ -73,7 +73,7 @@ $posters-radius: 15px;
     position: relative;
     display: block;
     height: 50%;
-    aspect-ratio: 0.75;
+    aspect-ratio: 3/4;
     transition: transform 100ms 50ms ease-in-out, border-radius 200ms ease-in-out, filter 200ms ease-in-out;
     animation: poster-in 500ms ease-in-out backwards;
     img {
