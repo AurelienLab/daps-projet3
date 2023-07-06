@@ -16,7 +16,7 @@ function displayMovieList(list) {
 
         let tagsString = ''
         for(let tag of movie.tags) {
-            tagsString += `<a href="recherche.html?genre=${tag}">${tag}</a>`
+            tagsString += `<a href="recherche.html?genre=${encodeURI(tag)}">${tag}</a>`
         }
         const movieContent = `
                 <div class="movie__poster">
